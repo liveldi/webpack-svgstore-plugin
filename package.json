@@ -18,25 +18,25 @@
     {
       "name": "Gordey Levchenko",
       "email": "levchenko.gordey@gmail.com"
+    },
+    {
+      "name": "Elena Litvinova",
+      "email": "ivanovaev90@gmail.com"
     }
   ],
   "license": "MIT",
   "dependencies": {
-    "async": "2.1.4",
-    "globby": "6.1.0",
-    "htmlparser2": "3.9.2",
-    "lodash": "4.17.2",
-    "pug": "2.0.4",
-    "svgo": "0.7.1"
+    "async": "3.2.0",
+    "globby": "11.0.1",
+    "htmlparser2": "5.0.1",
+    "pug": "3.0.0",
+    "svgo": "0.7.2"
   },
   "devDependencies": {
-    "chai": "3.5.0",
-    "codeclimate-test-reporter": "0.4.0",
-    "eslint-config-rambler": "0.2.5",
-    "istanbul": "0.4.5",
-    "mocha": "3.2.0",
+    "chai": "4.2.0",
+    "mocha": "8.2.1",
     "path": "0.12.7",
-    "webpack": "2.2.1"
+    "webpack": "4.44.1"
   },
   "repository": {
     "type": "git",

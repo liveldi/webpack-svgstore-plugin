@@ -1,7 +1,6 @@
 'use strict';
 
 // Depends
-const _ = require('lodash');
 const fs = require('fs');
 const path = require('path');
 const util = require('util');
@@ -105,7 +104,7 @@ const _parseSVG = function(arr, id) {
  */
 const _defs = function(id, dom, data) {
   // lets find defs into dom
-  const defs = _.filter(dom.children, { name: 'defs' });
+  const defs = dom.children.filter((item) => item.name === 'defs');
   const parseChilds = function(item, data) {
     item.forEach(function(child) {
       switch (child.name) {
@@ -158,9 +157,7 @@ const _symbols = function(id, dom, data, prefix) {
   };
 
   // add dom children without defs and titles
-  symbol.children = _.filter(dom.children, function(obj) {
-    return obj.name !== 'defs' && obj.name !== 'title';
-  });
+  symbol.children = dom.children.filter((item) => item.name !== 'defs' && item.name !== 'title');
 
   // go through the svg element
   _parseSVG(symbol.children, id);

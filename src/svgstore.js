@@ -13,7 +13,6 @@ const defaults = {
 };
 
 // Depends
-const _ = require('lodash');
 const path = require('path');
 const utils = require('./helpers/utils');
 const ConstDependency = require('webpack/lib/dependencies/ConstDependency');
@@ -31,7 +30,7 @@ class WebpackSvgStore {
    */
   constructor(options) {
     this.tasks = {};
-    this.options = _.merge({}, defaults, options);
+    this.options = Object.assign({}, defaults, options);
   };
 
   addTask(file, value) {
